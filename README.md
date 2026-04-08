@@ -1,10 +1,10 @@
 # NYC Rideshare: Year-Over-Year Analysis of Congestion Pricing Impact (Part 2)
 
-Manhattan lost 3 million rideshare trips in 2025. Outer boroughs gained 6.6 million. The congestion fee did not kill demand — it moved it.
+Manhattan lost 3 million rideshare trips in 2025. Outer boroughs gained 6.6 million. The congestion fee did not kill demand. It moved it.
 
 *This analysis builds on Part 1's quasi-experimental findings by expanding to a full year-over-year comparison of NYC rideshare data, examining whether the behavioral shifts observed in the immediate aftermath of the congestion fee persisted, normalized, or evolved over the course of 2024 and 2025.*
 
-![Full Dashboard Overview](nyc_rideshare_pt2_dashboard.png)
+[Click here](https://github.com/amontaywelch/NYC_Congestion_Quasi_Analysis) to view Part 1. 
 
 ---
 
@@ -17,6 +17,17 @@ In Part 1, the fee was examined through a focused six-month window, three months
 *Part 1 identified several early signals worth tracking over a longer horizon: Manhattan trip volume dropped **4%** in the immediate aftermath of the fee, the Bronx saw a **2% increase** suggesting early displacement, and revenue declined by **$95.8M** across the three-month after period. Part 2 both confirms and complicates these findings. The displacement story held, as outer boroughs continued absorbing trips away from Manhattan across the full year. However, the revenue picture reversed entirely. While Part 1 recorded a short-term revenue loss, Part 2 found that full year 2025 revenue actually grew **+4.1%** compared to 2024, suggesting riders who stayed in the congestion zone paid significantly more per trip. The initial shock captured in Part 1 was real, but it was not the complete story.*
 
 The data suggests congestion pricing may be a more effective demand-shaping tool than a demand-suppression tool. If that pattern holds into 2026, it has implications not just for NYC rideshare but for any city considering similar policies.
+
+---
+
+## Dashboard
+
+You can view the live interactive dashboard [here.](https://lookerstudio.google.com/reporting/7a1ff733-d341-4824-8848-9f005ec46a90)
+
+![Page 1 — Overview](images/nyc-pt2-page1.png)
+![Page 2 — Borough Pickups](images/nyc-pt2-page2.png)
+![Page 3 — Borough Dropoffs](images/nyc-pt2-page3.png)
+![Page 4 — Time Patterns](images/nyc-pt2-page4.png)
 
 ---
 
@@ -74,53 +85,71 @@ Part 2's data dictionary remains unchanged as the tables are the same as Part 1:
 
 ## Key Findings
 
-**The unexpected finding:** Despite losing **3.0M trips**, Manhattan net revenue grew **+7.14% YoY**. Fewer riders traveled into the congestion zone, but the ones who did paid more. The fee reshaped who rides into Manhattan, not just how many.
+**The unexpected finding:** Despite losing **3.0M trips** by pickup location, Manhattan net revenue grew **+7.14% YoY**. Fewer riders traveled into the congestion zone, but the ones who did paid more. The fee reshaped who rides into Manhattan, not just how many.
 
-- **Citywide trip volume grew, but Manhattan was the exception:** Total trips across NYC grew **+3.1% YoY** to **183,959,361**. Yet Manhattan, the only borough fully within the Congestion Relief Zone, saw trip volume decline **-3.27%**, making it the only borough to lose ridership year over year.
+### Overall Citywide Trends
 
-![Borough Performance Scorecard Pickups](borough_scorecard_pickups.png)
+- **Citywide trip volume grew across the full year:** Total trips across NYC grew **+3.1% YoY** to **183,959,361**, driven entirely by outer borough growth. *2025 trips recovered above 2024 levels by March after an initial post-fee dip in January, but failed to match 2024's holiday surge in November and December.*
 
-- **Demand shifted to outer boroughs rather than disappearing:** Manhattan lost approximately **3.0M trips** in 2025 while outer boroughs gained a combined **6.6M trips** — *Queens (+2.7M), Brooklyn (+2.1M), Bronx (+1.8M), and Staten Island (+280.4K).* Riders did not stop using rideshare. They stopped going to Manhattan.
+![Trip Volume 2024 vs 2025](images/nyc-pt2-trip-comparison.png)
 
-![Total Trip Volume by Borough](borough_trip_volume.png)
-![Trip Volume Change by Borough](borough_trip_change.png)
+- **Citywide revenue outpaced trip growth:** Net revenue reached **$1,110,782,721** in 2025, growing **+4.1% YoY** despite trips growing only **+3.1%**, meaning revenue grew faster than volume. *2025 revenue outpaced 2024 for most of the year, peaking in March before softening through summer and recovering in fall.*
 
-- **The congestion fee suppressed inbound Manhattan travel more than outbound:** Dropoff analysis reveals Manhattan saw a steeper trip decline for trips ending in the borough (**-4.3%**) than for trips starting there (**-3.27%**), confirming the fee had a stronger effect on riders traveling into the congestion zone. *Manhattan driver earnings from inbound trips turned slightly negative at **-0.24%**, compared to **+1.85%** for outbound trips.*
+![Net Revenue 2024 vs 2025](images/nyc-pt2-revenue-comparison.png)
 
-![Borough Performance Scorecard Dropoffs](borough_scorecard_dropoffs.png)
-![Dropoff Trip Volume Change by Borough](borough_dropoff_change.png)
+- **January 2025 showed initial resilience across all metrics:** In the first full month of the fee, total trips grew **+3.7%**, net revenue grew **+2.6%**, driver earnings grew **+5.7%**, and average fare grew **+1.3%** compared to January 2024. *Average trip minutes dropped **-1.5%**, suggesting slightly faster trips post-fee. Overall growth in January signals initial positive implementation, but it does not tell the entire story once the fee had time to settle.*
 
-- **Fewer trips into Manhattan did not mean less revenue:** Despite the trip volume decline, Manhattan net revenue grew **+7.14% YoY** and citywide net revenue reached **$1,110,782,721**, indicating that riders who continued traveling into the congestion zone paid more per trip, offsetting the volume loss.
+![January Spotlight](images/nyc-pt2-january-spotlight.png)
 
-- **January 2025 showed initial resilience across all metrics:** In the first full month of the fee, total trips grew **+3.7%**, net revenue grew **+2.6%**, driver earnings grew **+5.7%**, and average fare grew **+1.3%** compared to January 2024. *Average trip minutes dropped **-1.5%**, suggesting slightly faster trips post-fee.*
+- **The congestion fee changed where people rode, not when:** Citywide hourly trip and revenue patterns in 2025 were nearly identical to 2024 across all 24 hours and all seven days of the week. *The fee did not change rider behavior by time of day at a citywide level. Use the borough filter on the dashboard to see how patterns shift when isolating Manhattan specifically.*
 
-![January Spotlight](january_spotlight.png)
+![24 Hour Trip Comparison](images/nyc-pt2-trips-24hr.png)
+![24 Hour Net Revenue Comparison](images/nyc-pt2-revenue-24hr.png)
+![Trip Growth Heatmap](images/nyc-pt2-heatmap.png)
 
-- **After an initial post-fee dip, 2025 trips recovered quickly but fell short of 2024's holiday surge:** Trip volume crossed above 2024 levels by March but trailed significantly in November and December, *when holiday travel pushed 2024 to its annual peak.*
+### Pickup Analysis — Where Did Riders Start Their Trips?
 
-![Trip Volume 2024 vs 2025](trip_volume_line_chart.png)
+*Pickup location captures where riders chose to begin their journey. A decline in Manhattan pickups means fewer riders started trips from within the Congestion Relief Zone.*
 
-- **The congestion fee changed where people rode, not when:** Citywide hourly trip and revenue patterns in 2025 were nearly identical to 2024 across all 24 hours and all seven days of the week. The fee did not change rider behavior by time of day at a citywide level.
+- **Manhattan was the only borough where riders began fewer trips in 2025:** By pickup location, Manhattan trip volume declined **-3.27% YoY**, the only borough to post a negative result. Every outer borough grew — *Staten Island (+7.98%), Bronx (+6.08%), Queens (+5.45%), and Brooklyn (+3.25%).*
 
-![24 Hour Trip Comparison](hourly_trip_comparison.png)
-![24 Hour Net Revenue Comparison](hourly_revenue_comparison.png)
-![Trip Growth Heatmap](trip_growth_heatmap.png)
+![Borough Performance Scorecard Pickups](images/nyc-pt2-pickup-scorecard.png)
+
+- **Manhattan lost 3.0M pickup trips while outer boroughs gained 6.6M:** The scale of the shift confirms demand displacement rather than suppression. *Riders did not stop using rideshare. They stopped starting trips from Manhattan.*
+
+![Total Trip Volume by Borough](images/nyc-pt2-pickup-borough.png)
+![Trip Volume Change by Borough](images/nyc-pt2-pickup-change.png)
+
+- **Manhattan pickup revenue and earnings still grew despite fewer trips:** By pickup location, Manhattan net revenue grew **+7.14% YoY** and driver earnings grew **+1.85%**, the lowest of any borough but still positive. *Higher per-trip fares on remaining Manhattan pickups offset the volume loss, suggesting the fee filtered out lower-value trips while retaining higher-value ones.*
+
+### Dropoff Analysis — Where Did Riders End Their Trips?
+
+*Pickup analysis tells us where riders started. Dropoff analysis tells us where they went. Since the congestion fee applies to trips entering Manhattan below 60th Street, a decline in Manhattan dropoffs is a more direct measure of the fee's suppressive effect than a decline in pickups.*
+
+- **Manhattan saw a steeper decline in dropoffs than pickups:** By dropoff location, Manhattan trip volume declined **-4.3% YoY**, compared to **-3.27%** by pickup location. *The fee had a stronger suppressive effect on inbound travel into the congestion zone than on outbound travel out of it.*
+
+![Borough Performance Scorecard Dropoffs](images/nyc-pt2-dropoff-scorecard.png)
+
+- **Outer boroughs absorbed inbound demand as well as outbound:** By dropoff location, outer boroughs gained a combined **6.6M trips** in 2025, mirroring the pickup displacement pattern. *Riders redirected their destinations away from Manhattan, not just their starting points. The displacement finding holds from both directions.*
+
+![Total Dropoff Trip Volume by Borough](images/nyc-pt2-dropoff-boroughs.png)
+![Dropoff Trip Change by Borough](images/nyc-pt2-dropoff-changes.png)
+
+- **Manhattan dropoff driver earnings turned slightly negative:** By dropoff location, Manhattan driver earnings declined **-0.24% YoY**, compared to **+1.85%** for pickups. *Drivers making inbound Manhattan trips felt the fee's impact most directly. Notably, Manhattan dropoff revenue still grew **+6.35% YoY**, consistent with the pickup finding that fewer but higher-value trips defined the congestion zone in 2025.*
 
 ---
 
 ## Revenue Impact
 
-The expected story was that a new fee would reduce revenue. The data disagreed.
+The expected story was that a new fee would reduce revenue. The data disagreed, and the reason why matters.
 
-Citywide net revenue reached **$1,110,782,721** in 2025, reflecting a **+4.1% increase** compared to 2024, a counterintuitive result given Manhattan's trip volume decline. The monthly revenue chart reveals the full story: *2025 revenue outpaced 2024 for most of the year, peaking sharply in March before softening through summer and recovering in fall, closely mirroring seasonal travel demand.*
+Citywide trips grew **+3.1%** while revenue grew **+4.1%**, meaning revenue outpaced volume. This divergence is the most important financial signal in the analysis. It points to a structural shift in trip composition: the congestion fee appears to have removed lower-value trips from the market while retaining higher-value ones. Riders who continued traveling into Manhattan paid more per trip, and that premium more than offset the volume loss.
 
-![Net Revenue 2024 vs 2025](net_revenue_line_chart.png)
+This pattern was consistent across both directions of Manhattan travel. Pickup revenue grew **+7.14% YoY** and dropoff revenue grew **+6.35% YoY**, confirming the dynamic was not isolated to one type of Manhattan journey. The January spotlight reinforces this further, as average fare grew **+1.3%** and driver earnings grew **+5.7%** in the very first month of the fee, suggesting the higher per-trip value was immediate rather than gradual.
 
-The divergence between trip growth and revenue growth is the most important financial signal in this analysis. Citywide trips grew **+3.1%** while revenue grew **+4.1%**, meaning revenue grew faster than volume. Riders who continued using rideshare, particularly into Manhattan, paid more per trip. The average fare in January 2025 grew **+1.3%** compared to January 2024, and driver earnings grew **+5.7%** in the same period, *suggesting higher per-trip value compensated for reduced volume in the congestion zone.*
+Driver earnings reflected the same divided story seen in trip volume. Outer borough drivers benefited most, with Staten Island (+10.05%), Bronx (+8.02%), and Queens (+7.06%) leading earnings growth. Manhattan pickup earnings grew **+1.85%**, positive but the lowest of any borough. Dropoff earnings in Manhattan turned slightly negative at **-0.24%**, the only metric in this analysis to register a true decline, highlighting the specific pressure felt by drivers serving inbound congestion zone trips.
 
-At the borough level, Manhattan's revenue grew on both pickup and dropoff dimensions despite declining trip volume: **+7.14%** for trips starting in the borough and **+6.35%** for trips ending there. This consistency across both directions confirms that higher per-trip fares were not isolated to one type of Manhattan journey. *The congestion fee appears to have filtered out lower-value trips while retaining higher-value ones, reshaping the composition of Manhattan rideshare rather than simply reducing it.*
-
-Driver earnings told a more divided story. Citywide driver earnings grew **+3.2% YoY**, driven by outer borough gains. Manhattan driver earnings from pickups grew **+1.85%**, positive but the lowest of any borough. *Dropoff earnings in Manhattan turned slightly negative at **-0.24%**, indicating that drivers making inbound Manhattan trips felt the fee's impact most directly, earning marginally less from those trips despite higher fares.*
+The seasonal arc of 2025 revenue followed a recognizable pattern: peaking in March, softening through summer, recovering in fall,  suggesting the fee's impact was absorbed into normal market behavior rather than creating ongoing disruption. The one exception was the holiday season, where 2025 failed to match 2024's November and December surge, leaving a gap that warrants monitoring heading into 2026.
 
 ---
 
@@ -144,13 +173,13 @@ Driver earnings told a more divided story. Citywide driver earnings grew **+3.2%
 
 - **Pickup location as a proxy for 2024 congestion zone trips:** The `cbd_congestion_fee` column, which directly identifies trips subject to the congestion fee, *only exists in the 2025 dataset*. For 2024, Manhattan borough based on pickup location was used as a proxy for the congestion zone. This introduces some imprecision, as not all Manhattan pickups originate below 60th Street and not all congestion zone trips originate within Manhattan.
 
-- **Dropoff analysis uses borough-level geography:** Dropoff analysis in this project is conducted at the *borough level rather than the zone level*. Trips ending in Manhattan are not all ending within the Congestion Relief Zone, as some may end above 60th Street and would not be subject to the fee. A zone-level dropoff analysis would provide a more precise picture of inbound congestion zone demand.
+- **Dropoff analysis uses borough-level geography:** Dropoff analysis in this project is conducted at the *borough level rather than the zone level*. Trips ending in Manhattan are not all ending within the Congestion Relief Zone, as some may end above 60th Street and would not be subject to the fee, introducing the same geographic imprecision as the pickup proxy.
 
-- **Year-over-year comparisons do not control for external factors:** The 2024 vs 2025 comparison assumes that differences in trip volume, revenue, and earnings are *primarily attributable to the congestion fee*. However, other factors such as changes in gas prices, transit disruptions, weather patterns, economic conditions, or competitive dynamics between Uber and Lyft may also have influenced rider and driver behavior during this period.
+- **Year-over-year comparisons do not control for external factors:** The 2024 vs 2025 comparison does not control for external factors that may have independently influenced rideshare demand. *Macroeconomic conditions, MTA service changes, weather anomalies, and platform-level pricing decisions by Uber and Lyft could all have contributed to the patterns observed*, making it difficult to attribute changes solely to the congestion fee.
 
 - **December 2024 holiday effect on the full year baseline:** December is historically the highest volume month for NYC rideshare. *Including a full December 2024 in the baseline may slightly inflate the 2024 annual totals*, making 2025 growth appear more modest than it would under a seasonally adjusted comparison.
 
-- **Part 2 does not capture individual company performance:** This analysis treats all rideshare trips as a single market. *Uber and Lyft may have responded differently to the congestion fee* through pricing adjustments, driver incentives, or promotional campaigns. Part 3 will examine platform-level differences.
+- **Part 2 does not capture individual company performance:** This analysis treats all rideshare trips as a single market. *Uber and Lyft may have responded differently to the congestion fee* through pricing adjustments, driver incentives, or promotional campaigns. This limits the analysis to market-level conclusions and may obscure platform-specific responses to the fee.
 
 ---
 
